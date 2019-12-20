@@ -9,7 +9,7 @@
 </head>
 <body>
     <main>
-        <?php var_dump($group_name); ?>
+        <?php var_dump($group_name) ?>
     </main>
 </body>
 </html>
