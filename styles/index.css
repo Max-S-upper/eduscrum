@@ -1,0 +1,240 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-Medium.ttf);
+}
+* {
+  padding: 0 0;
+  outline: none;
+}
+
+body {
+  margin: 0;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  background-color: #0D1221;
+  color: #B7C3D7;
+}
+body header {
+  display: flex;
+  font-family: Roboto;
+  width: 100%;
+  height: 40px;
+  background-color: #233056;
+  color: #B7C3D7;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+body header ul {
+  display: flex;
+  width: 300px;
+  margin-left: 32%;
+}
+body header ul li {
+  text-align: center;
+  width: 100px;
+  list-style: none;
+  margin-left: 50px;
+  cursor: pointer;
+}
+body header .profile {
+  width: 282px;
+  height: 35px;
+  display: flex;
+  background: url("../images/ico-exit.png") no-repeat;
+  background-position: right;
+  background-size: 6%;
+  margin-right: 3%;
+  justify-content: flex-end;
+}
+body header .profile img {
+  width: 30px;
+  height: 30px;
+  margin-right: 31%;
+  margin-top: 1.05%;
+  cursor: pointer;
+}
+body header .profile p,
+body header .profile a {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+body header .profile p:first-child {
+  margin-left: 10px;
+  margin-right: 4%;
+  font-size: 11pt;
+}
+body header .profile a:nth-child(3) {
+  justify-content: flex-end;
+  margin-right: 9%;
+  font-size: 11pt;
+}
+body main {
+  height: 95vh;
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 0.5fr 3fr 0.5fr;
+}
+body main ul {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  cursor: pointer;
+  width: 300px;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  justify-content: center;
+  border-radius: 3px;
+  transition: .5s;
+}
+body main ul li {
+  margin: 0;
+  height: 45px;
+  width: 100%;
+  background: url("../images/ico-next.png") #22293F no-repeat;
+  background-position: right;
+  background-size: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #B7C3D7;
+  font-family: Roboto;
+  transition: .5s;
+}
+body main ul .hiddenSub {
+  display: none;
+}
+body main ul .subMenu {
+  z-index: -1;
+  transition: .5s;
+}
+body main .groups {
+  grid-row: 2/3;
+  grid-column: 3/4;
+  background: #151C33;
+  min-height: 79vh;
+  min-width: 65vw;
+  display: flex;
+  border-radius: 3px;
+  overflow-y: scroll;
+}
+.group-block {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: 
+  #8e8eca30;
+  margin: 10px;
+}
+body main .groups div:first-child,
+body main .groups div:nth-child(2),
+body main .groups div:nth-child(3),
+body main .groups div:nth-child(4) {
+  background-color: #28324F;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto;
+  font-size: 55pt;
+  cursor: pointer;
+  transition: .7s;
+}
+body main .groups div:first-child {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+body main .groups div:nth-child(2) {
+  grid-row: 4/5;
+  grid-column: 2/3;
+}
+body main .groups div:nth-child(3) {
+  grid-row: 2/3;
+  grid-column: 4/5;
+}
+body main .groups div:nth-child(4) {
+  grid-row: 4/5;
+  grid-column: 4/5;
+}
+body main .groups .allInGroups {
+  grid-row: 1/6;
+  grid-column: 1/6;
+  width: 100%;
+  height: 100%;
+  display: none;
+  margin-top: 2.2%;
+}
+body main .groups .allInGroups .inGroup {
+  transition: .7s;
+  background-color: #28324F;
+  height: 120px;
+  width: 200px;
+  border-radius: 3px;
+  margin: 10px 0;
+}
+main > div:first-child {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.crtNewList {
+  cursor: pointer;
+  width: 89%;
+  text-align: center;
+  margin-top: 1vh;
+  font-size: 18pt;
+}
+
+a {
+  font-family: Roboto;
+  text-decoration: none;
+  color: #B7C3D7;
+  transition: .3s;
+}
+
+a:hover {
+  color: #fff;
+}
+.rightSideUl li {
+  list-style: none;
+  margin-left: 34px;
+  margin-bottom: 1vh;
+  margin-right: 15px;
+  word-wrap: anywhere;
+}
+
+.rightSideUl li:last-child {
+  margin-bottom: 2vh;
+}
+
+p {
+  color: #B7C3D7;
+  font-family: Roboto;
+}
+
+.rightSideUl {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  width: 27vw;
+  background-color: #151C33;
+}
+
+.rightSideUl p {
+  align-self: center;
+  font-size: 23pt;
+  margin: 10px;
+}
+
+.rightSideUl li:hover a{
+  color: #fff;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,15 @@
+* {
+	outline: none;
+}
+
+.hidden {
+	display: none!important;
+}
+
+input[type=submit] {
+	cursor: pointer;
+}
+
+input[type=submit] {
+	cursor: pointer;
+}

@@ -1,0 +1,189 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-Medium.ttf);
+}
+* {
+  padding: 0 0;
+}
+
+body {
+  margin: 0;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  background-color: #0D1221;
+  color: #B7C3D7;
+}
+body header {
+  display: flex;
+  font-family: Roboto;
+  width: 100%;
+  height: 40px;
+  background-color: #233056;
+  color: #B7C3D7;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+body header ul {
+  display: flex;
+  width: 300px;
+  margin-left: 32%;
+}
+body header ul li {
+  text-align: center;
+  width: 100px;
+  list-style: none;
+  margin-left: 50px;
+  cursor: pointer;
+}
+body header .profile {
+  width: 282px;
+  height: 35px;
+  display: flex;
+  background: url("../images/ico-exit.png") no-repeat;
+  background-position: right;
+  background-size: 6%;
+  margin-right: 3%;
+  justify-content: flex-end;
+}
+body header .profile img {
+  width: 30px;
+  height: 30px;
+  margin-right: 31%;
+  margin-top: 1.05%;
+  cursor: pointer;
+}
+body header .profile p {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+body header .profile p:first-child {
+  margin-left: 10px;
+  margin-right: 4%;
+  font-size: 11pt;
+}
+body header .profile p:nth-child(3) {
+  justify-content: flex-end;
+  margin-right: 7%;
+  font-size: 9pt;
+}
+body main {
+  height: 95vh;
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 0.5fr 3fr 0.5fr;
+}
+a {
+  text-decoration: none;
+  color: #B7C3D7;
+}
+
+a:hover {
+  transition: .3s;
+  color: #fff;
+}
+.inputs{
+	display: flex;
+	flex-direction: column;
+	width: 33%;
+  margin: 0 auto;
+}
+.inputs img{
+	width:50px;
+	height: 50px;
+	cursor: pointer;
+}
+.inputs input,
+.inputs select{
+	width: 100%;
+	height: 26px;	
+	background: rgb(62, 75, 115);
+	border: none;
+	border-radius: 3px;
+  border: 1px solid #B7C3D7;
+  border-radius: 50px;
+  background-color: rgba(183, 195, 215, .15);
+}
+.inputs input,
+.inputs img,
+.inputs select{
+	margin-top: 10px;
+	text-align: center;
+	color: #B7C3D7;
+	font-family: Roboto;
+  height: 6vh;
+}
+
+.inputs > input:last-child,
+.inputs img:nth-child(5) {
+  margin: 0 auto;
+}
+
+.inputs > input:last-child {
+  margin-top: 1vh;
+}
+
+h1{
+  /* margin-left: 43%; */
+  text-align: center;
+	font-family: Roboto;
+}
+.inputs > input:last-child{
+	transition: .3s;
+	width: 30%;
+	justify-content: flex-end;
+}
+.inputs > input:last-child:hover{
+background-color: #233056;
+}
+
+.rightSideUl li {
+  list-style: none;
+}
+.rightSideUl button {
+  margin-left: 34px;
+  margin-bottom: 1vh;
+  font-size: 19pt;
+  font-family: Roboto;
+  border: none;
+  color:#B7C3D7;
+  cursor: pointer;
+  background: none;
+  transition: .2s;
+}
+.rightSideUl li:last-child {
+  margin-bottom: 2vh;
+}
+p {
+  color: #B7C3D7;
+  font-family: Roboto;
+}
+
+.rightSideUl {
+  border: 1px solid #B7C3D7;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  width: 73.5vw;
+  background-color: rgba(183, 195, 215, .15); 
+  margin: 0 auto;
+  margin-top: 3vh;
+}
+
+.rightSideUl p {
+  align-self: center;
+  font-size: 27pt;
+  margin: 10px;
+}
+
+
+.rightSideUl button:hover{
+  color: #fff;
+}
+.inputs div {
+    display: flex;
+    align-items: center;
+}

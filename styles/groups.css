@@ -1,0 +1,100 @@
+body main {
+  display: block;
+}
+
+.rightSideUl li {
+  list-style: none;
+  margin-left: 34px;
+  margin-bottom: 1vh;
+  font-size: 19pt;
+  font-family: Roboto;
+}
+.rightSideUl li:last-child {
+  margin-bottom: 2vh;
+}
+p {
+  color: #B7C3D7;
+  font-family: Roboto;
+}
+
+.rightSideUl {
+  border: 1px solid #B7C3D7;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  width: 73.5vw;
+  background-color: rgba(183, 195, 215, .15); 
+  margin: 0 auto;
+  margin-top: 3vh;
+}
+
+.rightSideUl p {
+  align-self: center;
+  font-size: 27pt;
+  margin: 10px;
+}
+
+
+.rightSideUl li:hover a{
+  color: #fff;
+}
+.inputs div {
+    display: flex;
+    align-items: center;
+}
+
+.inputs{
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  margin: 0 auto;
+}
+.inputs img{
+  width:50px;
+  height: 50px;
+  cursor: pointer;
+}
+.inputs input,
+.inputs select{
+  width: 100%;
+  height: 26px; 
+  background: rgb(62, 75, 115);
+  border: none;
+  border-radius: 3px;
+  border: 1px solid #B7C3D7;
+  border-radius: 50px;
+  background-color: rgba(183, 195, 215, .15);
+}
+.inputs input,
+.inputs img,
+.inputs select{
+  margin-top: 10px;
+  text-align: center;
+  color: #B7C3D7;
+  font-family: Roboto;
+  height: 6vh;
+}
+
+.inputs > input:last-child,
+.inputs img:nth-child(5) {
+  margin: 0 auto;
+}
+
+.inputs > input:last-child {
+  margin-top: 1vh;
+}
+
+h1{
+  /* margin-left: 43%; */
+  text-align: center;
+  font-family: Roboto;
+}
+.inputs > input:last-child{
+  transition: .3s;
+  width: 30%;
+  justify-content: flex-end;
+}
+.inputs > input:last-child:hover{
+background-color: #233056;
+}

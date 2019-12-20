@@ -1,0 +1,229 @@
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/Roboto/Roboto-Medium.ttf);
+}
+body {
+	height: 98vh;
+	background: url('images/bgMain.jpg');
+    background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    main {
+        opacity: 0.95;
+        width: 960px;
+        height: 670px;
+        background: #fff;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div:first-child{
+            margin-left: -27px;
+            margin-right: 50px;
+            transition: 1s;
+            img{
+
+            }
+        }
+        .content{
+            margin-top: 170px;
+            transition: 1.2s;
+            .signIn{
+                margin-left: 100px;
+                height:300px;
+                width: 290px;
+                margin-top: 0px;
+                i{
+                    position: absolute;
+                    margin-top: -32px;
+                    margin-left: 25px;
+                    color:#666666;
+                    transition: .5s;
+                }
+                i:nth-child(5){
+                    margin-top: -62px;
+                }
+                h2{
+                    text-align: center;
+                    font-family: Roboto;
+                }
+                input:nth-child(2):focus + i{
+                    color: #57b846;
+                    transform: translateX(-5px);
+                }
+                input:nth-child(4):focus + i{
+                   color: #57b846; 
+                   transform: translateX(-5px);
+                }
+                input:nth-child(4){
+                    margin-top:10px;
+                    margin-bottom: 30px;
+                }
+                input:nth-child(2),
+                input:nth-child(4){
+                    font-family: Roboto;
+                    font-size: 15px;
+                    color: #666666;
+                    display: block;
+                    background: #e6e6e6;
+                    height: 50px;
+                    border-radius: 25px;
+                    padding: 0 30px 0 68px;
+                    border: none;
+                }
+                input:nth-child(6){
+                    font-size: 15px;
+                    color: #fff;
+                    text-transform: uppercase;
+                    width: 100%;
+                    height: 50px;
+                    border-radius: 25px;
+                    background: #57b846;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0 25px;
+                    transition: all 0.4s;
+                    border: none;
+                    cursor: pointer;
+                    font-family: Roboto;
+                }
+                input:nth-child(6):hover{
+                    background: #444;
+                }
+            }
+            .forgot{
+                display: flex;
+                margin-top: -20px;
+                margin-left: 155px;
+                font-family: Roboto;
+                height: 20px;
+                p:first-child{
+                    font-size: 13px;
+                    line-height: 1.5;
+                    color: #999999;
+                }
+                a,
+                p:nth-child(3),
+                p:nth-child(5){
+                    text-decoration: none;
+                    font-size: 13px;
+                    line-height: 1.5;
+                    color: #666666;
+                    margin-left: 3px;
+                    transition: all 0.4s;
+                }
+                p:nth-child(3),
+                p:nth-child(5),
+                p:first-child{
+                    margin-top: -0px;
+                }
+                a:nth-child(2):hover{
+                    color: #57b846;
+                }
+                a:nth-child(4):hover{
+                    color: #57b846;
+                }
+            }
+            p:nth-child(3){
+                    font-family: Roboto;
+                    font-size: 13px;
+                    line-height: 1.5;
+                    color: #666666;
+                    transition: all 0.4s;
+                    cursor: pointer;
+                    margin-left: 175px;
+                    margin-top: 120px;
+            }
+            p:nth-child(3):hover{
+                color: #57b846; 
+            }
+        }
+        .signUp{
+            text-align: center;
+            font-family: Roboto;
+            select{
+                font-family: Roboto;
+                font-size: 15px;
+                color: #666666;
+                display: block;
+                background: #e6e6e6;
+                height: 50px;
+                border-radius: 25px;
+                width: 100%;
+                border: none;
+                text-align: center;
+                margin-top:8px;
+            }
+            i{
+                    position: absolute;
+                    margin-top: -32px;
+                    margin-left: 25px;
+                    color:#666666;
+                    transition: .5s;
+                    margin-top: -33px;
+                    margin-left: -112px;
+            }
+            i:nth-child(14){
+                margin-left:25px;
+                transition: 1s;
+            }
+            input:nth-child(2),
+            input:nth-child(4),
+            input:nth-child(6),
+            input:nth-child(8),
+            input:nth-child(10),
+            input:nth-child(13){
+                font-family: Roboto;
+                font-size: 15px;
+                color: #666666;
+                display: block;
+                background: #e6e6e6;
+                height: 50px;
+                border-radius: 25px;
+                padding: 0 30px 0 68px;
+                border: none; 
+                margin-top: 8px; 
+                transition: 1s; 
+            }
+            input:nth-child(2):focus + i,
+            input:nth-child(4):focus + i,
+            input:nth-child(6):focus + i,
+            input:nth-child(8):focus + i,
+            input:nth-child(10):focus + i,
+            input:nth-child(13):focus + i{
+                color: #57b846;
+                transform: translateX(-5px);
+            }
+            input:last-child{
+                font-size: 15px;
+                color: #fff;
+                text-transform: uppercase;
+                width: 100%;
+                height: 50px;
+                border-radius: 25px;
+                background: #57b846;
+                justify-content: center;
+                align-items: center;
+                padding: 0 25px;
+                transition: all 0.4s;
+                border: none;
+                cursor: pointer;
+                font-family: Roboto;
+                margin-top: 25px;
+            }
+            input:last-child:hover{
+            background: #444;
+            }
+        }
+        .about{
+            p{
+                font-family: Roboto;
+                font-size: 24px;
+                text-align: center; 
+            }
+        }
+    }
+}
+
+
