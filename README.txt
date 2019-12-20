@@ -1,0 +1,1 @@
+EduScrum is a WEB-application with SCRUM module that allows you to organize your and your students' workspace, if you are a teacher, as well as to track your students' progress in completing tasks of the list you create. Or to see all your current tasks in one place.
