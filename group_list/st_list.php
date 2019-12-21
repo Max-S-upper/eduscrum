@@ -37,36 +37,36 @@ $list_name = $con->query("SELECT `name` FROM `lists` WHERE `id` = $list_id")->fe
                 foreach ($taskIds as $taskId) :
                     $task_id = $taskId['taskId'];
                     $task = $con->query("SELECT `name`, `description` FROM `tasks` WHERE `id` = $task_id")->fetch();
+                    $personalTask = $con->query("SELECT `personalTask` FROM `workflow` WHERE `studentId` = $student_id AND `taskId` = $task_id")->fetch();
+                    $personalTask = $personalTask[0];
                     ?>
-                    <div>
+                    <form method="post" action="">
                         <span>
                             <?= $student['name'] ?>
                         </span>
-                            <span>
+                        <span>
                             <?= $student['surname'] ?>
                         </span>
-                            <span>
+                        <span>
                             <?= $task[0] ?>
                         </span>
-                            <span>
-                            <?= $task[1] ?>
-                        </span>
-                            <span>
+                        <input type="text" name="personal-task" data-student-id="<?= $student_id ?>" data-task-id="<?= $task_id ?>" placeholder="description" value="<?php if ($personalTask) echo $personalTask; else if ($task[1]) echo $task[1]; else ''; ?>">
+                        <span>
                             <?php
                             if ($taskId['status'] == 1) echo 'To do';
                             else if ($taskId['status'] == 2) echo 'Doing';
                             else echo 'Done';
                             ?>
                         </span>
-                            <span>
-                            <?= $taskId['grade'] == NULL ? 'Null' : $taskId['grade']; ?>
-                        </span>
-                    </div>
+                        <input type="number" name="grade" data-student-id="<?= $student_id ?>" data-task-id="<?= $task_id ?>" placeholder="grade" value="<?= $taskId['grade'] === NULL ? 0 : $taskId['grade']; ?>">
+                    </form>
                 <?php
                 endforeach;
             endforeach;
             ?>
         </div>
     </main>
+    <script src="../jquery-3.4.1.min.js"></script>
+    <script src="../group_list.js"></script>
 </body>
 </html>

@@ -5,4 +5,4 @@ if (array_key_exists('group_id', $_SESSION)) {
     include_once 'st_list.php';
 }
 
-//else header("Location: /");
+else header("Location: /");

@@ -17,9 +17,9 @@
 <body>
 	<header>
 		<ul>
-			<li><a href="/">Home</a></li>
+			 <li><a href="/">Home</a></li>
 			<li><a href="/lists">Lists</a></li>
-			<li><a href="/groups">Groups</a></li>
+			 <li><a href="/groups">Groups</a></li>
 		</ul>
 		<div class="profile">
 			<p><a href="/profile">Profile</a></p> <img src="images/ico-profile.png" alt="profile"> <a href="/signOut.php">Sign out</a>
