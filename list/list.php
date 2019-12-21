@@ -33,7 +33,7 @@
 			$groups = $con->query("SELECT * FROM `groups`")->fetchAll(); ?>
 		</form>
 		<h1><?= $listName['name'] ?></h1>
-		<?php $list = $con->query("SELECT * FROM tasks WHERE listId = '$lid'")->fetchAll(); ?>
+		<?php $list = $con->query("SELECT * FROM tasks WHERE listId = '$lid' ORDER BY `id`")->fetchAll(); ?>
 		<?php foreach($list as $task): ?>
 			<p><?= $task['name']; ?></p>
 		<?php endforeach; ?>

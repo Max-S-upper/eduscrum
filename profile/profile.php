@@ -1,10 +1,8 @@
-<?php 
-	$uacces = '';
+<?php
 	$uid = $_COOKIE['PHPSESSDI'];
 	if ($con->query("SELECT `type` FROM `user` WHERE `id` = '$uid'")->fetch()[0] == '0') $uacces = 1;
 	else $uacces = 0;
 	$id = $_COOKIE['PHPSESSDI'];
-	$student_lists;
 	if ($uacces == 0) {
 		$usr_group = $con->query("SELECT `group` FROM `user` WHERE `id` = $id")->fetch();
 		$usr_group = $usr_group[0];
@@ -68,8 +66,8 @@
 								<?php
 								$listId = $list['id'];
 								if ($usr == 0) {
-									$tasks = $con->query("SELECT * FROM `tasks` WHERE `listId` = '$listId' AND `status` = '1'")->fetchAll();
-									// if (count($tasks) == 0) echo "<p>Done</p>";
+									$tasks = $con->query("SELECT * FROM `tasks` WHERE `listId` = '$listId' AND `status` = '1' ORDER BY `id`")->fetchAll();
+									// if (count($tasks) == 1) echo "<p>Done</p>";
 									foreach ($tasks as $key => $task):
 									?>
 										<div>
@@ -80,9 +78,10 @@
 								}
 								
 								else {
-									$task_ids = $con->query("SELECT `taskId` FROM `workflow` WHERE `studentId` = $uid AND `listId` = $listId AND `status` = 1 ORDER BY `id`")->fetchAll();
+									$task_ids = $con->query("SELECT `taskId`, `personalTask` FROM `workflow` WHERE `studentId` = $uid AND `listId` = $listId AND `status` = 1 ORDER BY `id`")->fetchAll();
 									foreach($task_ids as $task_id) {
-										$task = $con->query("SELECT * FROM `tasks` WHERE `id` = $task_id[0]")->fetch();
+										if (!$task_ids[1]) $task = $con->query("SELECT * FROM `tasks` WHERE `id` = $task_id[0]")->fetch();
+										else $task = $task_ids[1];
 										?>
 										<div>
 											<li class="task"><?php echo $task[1]; ?></li>
@@ -100,7 +99,7 @@
 								$href = '../list?id='.$list['id'];
 								$listId = $list['id'];
 								if ($usr == 0) {
-									$tasks = $con->query("SELECT * FROM `tasks` WHERE `listId` = '$listId' AND `status` = '2'")->fetchAll();
+									$tasks = $con->query("SELECT * FROM `tasks` WHERE `listId` = '$listId' AND `status` = '2' ORDER BY `id`")->fetchAll();
 									foreach ($tasks as $key => $task):
 									?>
 										<div>
@@ -112,7 +111,7 @@
 								}
 								
 								else {
-									$task_ids = $con->query("SELECT `taskId` FROM `workflow` WHERE `studentId` = $uid AND `listId` = $listId AND `status` = 2")->fetchAll();
+									$task_ids = $con->query("SELECT `taskId` FROM `workflow` WHERE `studentId` = $uid AND `listId` = $listId AND `status` = 2 ORDER BY `id`")->fetchAll();
 									foreach($task_ids as $task_id) {
 										$task = $con->query("SELECT * FROM `tasks` WHERE `id` = $task_id[0]")->fetch();
 										?>
@@ -134,7 +133,7 @@
 								<?php
 								$listId = $list['id'];
 								if ($usr == 0) {
-									$tasks = $con->query("SELECT * FROM `tasks` WHERE `listId` = '$listId' AND `status` = '3'");
+									$tasks = $con->query("SELECT * FROM `tasks` WHERE `listId` = '$listId' AND `status` = '3' ORDER BY `id`");
 									foreach ($tasks as $key => $task):
 									?>
 										<div>
@@ -145,7 +144,7 @@
 								}
 								
 								else {
-									$task_ids = $con->query("SELECT `taskId` FROM `workflow` WHERE `studentId` = $uid AND `listId` = $listId AND `status` = 3")->fetchAll();
+									$task_ids = $con->query("SELECT `taskId` FROM `workflow` WHERE `studentId` = $uid AND `listId` = $listId AND `status` = 3 ORDER BY `id`")->fetchAll();
 									foreach($task_ids as $task_id) {
 										$task = $con->query("SELECT * FROM `tasks` WHERE `id` = $task_id[0]")->fetch();
 										?>

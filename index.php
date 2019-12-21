@@ -41,7 +41,7 @@
           header("Location: /");
         }
       }
-      
+
       if (isset($_POST['signUp'])) {
         $name = $_POST['name'];
         $surname = $_POST['surname'];
@@ -50,16 +50,17 @@
         $password = password_hash($password, PASSWORD_DEFAULT);
         $group = $_POST['group'];
         $status = $_POST['status'];
-        if ($status == 'student') {
+        if ($status === 'student') {
         	$group = $_POST['group'];
         	$query = "INSERT INTO `user`(`name`, `surname`, `email`, `password`, `group`, `type`) VALUES('$name', '$surname', '$email', '$password', '$group', '1')";
+        	$lists = $con->query("SELECT * FROM `lists`")
         }
 
         else {
         	$PIN = $_POST['PIN'];
         	$query = "INSERT INTO `user`(`name`, `surname`, `email`, `password`, `type`) VALUES('$name', '$surname', '$email', '$password', '0')";
         }
-        
+
         $con->exec($query);
       }
     }
@@ -68,4 +69,3 @@
       include('main.php');
     }
   }
-?>
