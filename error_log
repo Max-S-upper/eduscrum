@@ -1,0 +1,10 @@
+[20-Dec-2019 21:22:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE `studentId` =  AND `taskId` =' at line 1 in /home/lavlexco/eduscrum.tk/group_list/send_data.php:7
+Stack trace:
+#0 /home/lavlexco/eduscrum.tk/group_list/send_data.php(7): PDO->query('UPDATE `workflo...')
+#1 {main}
+  thrown in /home/lavlexco/eduscrum.tk/group_list/send_data.php on line 7
+[20-Dec-2019 21:29:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'blablacar' in 'field list' in /home/lavlexco/eduscrum.tk/group_list/send_data.php:7
+Stack trace:
+#0 /home/lavlexco/eduscrum.tk/group_list/send_data.php(7): PDO->query('UPDATE `workflo...')
+#1 {main}
+  thrown in /home/lavlexco/eduscrum.tk/group_list/send_data.php on line 7
