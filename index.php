@@ -50,7 +50,7 @@
         $password = password_hash($password, PASSWORD_DEFAULT);
         $group = $_POST['group'];
         $status = $_POST['status'];
-        if ($status === 'student') { j
+        if ($status === 'student') {
         	$group = $_POST['group'];
         	$query = "INSERT INTO `user`(`name`, `surname`, `email`, `password`, `group`, `type`) VALUES('$name', '$surname', '$email', '$password', '$group', '1')";
         	$lists = $con->query("SELECT * FROM `lists`")
