@@ -17,7 +17,7 @@
 <body>
 	<header>
 		<ul>
-			<li><a href="/">Home</a></li>
+			  <li><a href="/">Home</a></li>
 			<li><a href="/lists">Lists</a></li>
 			 <li><a href="/groups">Groups</a></li>
 		</ul>
